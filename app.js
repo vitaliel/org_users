@@ -1,8 +1,8 @@
-const express = require("express");
-const morgan = require("morgan");
+import express from "express";
+import morgan from "morgan";
 import requestID from 'express-request-id';
 
-app = express()
+const app = express()
 app.use(morgan('dev')) //dev, combined - apache similar logs
 app.use(requestID()) // use req.id
 
@@ -61,7 +61,4 @@ app.get('/user/is_role_valid', (req, res) => {
   }
 })
 
-const port = process.env.PORT || 3000
-app.listen(port, () => {
-  console.log('Listening on port ' + port)
-})
+export default app

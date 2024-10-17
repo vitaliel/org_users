@@ -2,9 +2,11 @@
   "name": "emis-users",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node bin/www",
+    "start:dev": "nodemon bin/www"
   },
   "keywords": [],
   "author": "",
